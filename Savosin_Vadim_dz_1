@@ -1,0 +1,28 @@
+print('If you want to stop print -1')
+
+d = {'сек':0, 'мин':0, 'час':0, 'дн':0}
+
+while True:
+    t = int(input('duration = '))
+    if t == -1: break
+    for i in range(4):
+        if i < 2:
+            d_t = t % 60
+            d[i] = d_t
+            t //= 60
+        elif i == 2:
+            d_t = t % 24
+            d[i] = d_t
+            t //= 24
+        else: 
+            d[i] = t
+    if d[1] == 0 and d[2] == 0 and d[3] == 0:
+        print(d[0], 'сек')
+    elif d[2] == 0 and d[3] == 0:
+        print(d[1], 'мин', d[0], 'сек')
+    elif d[3] == 0:
+        print(d[2], 'час', d[1], 'мин', d[0], 'сек')
+    else:
+        print(d[3], 'дн', d[2], 'час', d[1], 'мин', d[0], 'сек')
+                
+            

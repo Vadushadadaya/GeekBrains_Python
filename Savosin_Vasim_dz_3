@@ -1,0 +1,9 @@
+S = []
+S = range(1, 101)
+for i in range(len(S)):
+    if S[i] % 10 == 1:
+        print(S[i], 'процент')
+    elif S[i] % 10 > 1 and S[i] % 10 < 5:
+        print(S[i], 'процента')
+    else:
+        print(S[i], 'процентов')
