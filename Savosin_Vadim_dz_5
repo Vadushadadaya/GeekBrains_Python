@@ -1,0 +1,26 @@
+a = [57.8, 46.51, 97, 82.2, 51, 23.03, 22.8, 10.10, 13.07, 5.2]
+def out(a):
+    b = ''
+    c = ''
+    for i in a:
+        if int((i*100)%100)<10:
+            c += str(int((i*100)%100))
+            c += '0'
+            c = c[::-1]
+        else:
+            c = str(int((i*100)%100))
+        b += str(int(i)) + ' руб ' + c + ' коп' + ', '
+        c = ''
+    print(b, '\n')   
+
+out(a)
+
+a.sort()
+out(a)
+
+#a.sort(reverse=True)
+new_a = a[::-1]
+out(new_a)
+
+out(a[len(a)-5:])
+ 
